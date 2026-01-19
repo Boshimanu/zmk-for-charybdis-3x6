@@ -12,15 +12,29 @@
 / {
     combos { compatible = "zmk,combos"; };
 
+    behaviors {
+        ht: ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <145>;
+            quick-tap-ms = <50>;
+            require-prior-idle-ms = <50>;
+            flavor = "balanced";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         Base {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp F      &kp P      &kp G        &kp J        &kp L      &kp U      &kp Y    &kp SEMI  &kp BSLH
-&kp BSPC   &kp A  &kp R  &kp S      &kp T      &kp D        &kp H        &kp N      &kp E      &kp I    &kp O     &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C      &kp V      &kp B        &kp K        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                         &mkp LCLK  &mkp RCLK  &mkp MCLK    &lt 1 ENTER  &kp SPACE
+&ht LS(TAB) TAB  &kp Q  &kp W  &kp F      &kp P      &kp G        &kp J        &kp L      &kp U      &kp Y    &kp SEMI  &kp BSLH
+&kp BSPC         &kp A  &kp R  &kp S      &kp T      &kp D        &kp H        &kp N      &kp E      &kp I    &kp O     &kp SQT
+&kp LSHFT        &kp Z  &kp X  &kp C      &kp V      &kp B        &kp K        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                               &mkp LCLK  &mkp RCLK  &mkp MCLK    &lt 1 ENTER  &kp SPACE
             >;
         };
 
