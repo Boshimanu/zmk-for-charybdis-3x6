@@ -24,6 +24,45 @@
             require-prior-idle-ms = <50>;
             flavor = "balanced";
         };
+
+        ht_bck: ht_bck {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_BCK";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <145>;
+            quick-tap-ms = <0>;
+            require-prior-idle-ms = <140>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <12>;
+        };
+
+        lhmrow: lhmrow {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LHMROW";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <30>;
+            require-prior-idle-ms = <100>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <6 7 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 8 39 40 0>;
+        };
+
+        rhmrow: rhmrow {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RHMROW";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <30>;
+            require-prior-idle-ms = <100>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+        };
     };
 
     keymap {
@@ -31,19 +70,19 @@
 
         Base {
             bindings = <
-&ht LS(TAB) TAB  &kp Q  &kp W  &kp F      &kp P      &kp G        &kp J        &kp L      &kp U      &kp Y    &kp SEMI  &kp BSLH
-&kp BSPC         &kp A  &kp R  &kp S      &kp T      &kp D        &kp H        &kp N      &kp E      &kp I    &kp O     &kp SQT
-&kp LSHFT        &kp Z  &kp X  &kp C      &kp V      &kp B        &kp K        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                               &mkp LCLK  &mkp RCLK  &mkp MCLK    &lt 1 ENTER  &kp SPACE
+&ht LS(TAB) TAB         &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P           &kp G                  &kp J        &kp L           &kp U                &kp Y                    &ht COLON SEMICOLON  &ht PIPE NON_US_BACKSLASH
+&ht_bck BSPC BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T  &kp D                  &kp H        &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow RCTRL O      &ht DOUBLE_QUOTES SQT
+&kp LSHFT               &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V     &ht LG(B) B            &kp K        &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH   &kp RSHFT
+                                                         &mkp LCLK         &mkp RCLK       &mkp MCLK              &lt 1 ENTER  &kp SPACE
             >;
         };
 
         layer_1 {
             bindings = <
-&trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&bootloader  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &bootloader
-                             &trans  &trans  &trans    &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &bootloader
+                             &trans  &trans  &trans            &trans  &trans
             >;
         };
     };
