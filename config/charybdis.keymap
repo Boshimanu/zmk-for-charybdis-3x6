@@ -63,6 +63,15 @@
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
+
+        dt_ameth: dt_ameth {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_AMETH";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LS(O))>, <&kp LA(LS(D))>, <&kp LS(LA(LC(J)))>;
+
+            tapping-term-ms = <180>;
+        };
     };
 
     keymap {
@@ -79,10 +88,10 @@
 
         layer_1 {
             bindings = <
-&trans       &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&bootloader  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &bootloader
-                             &trans  &trans  &trans            &trans  &trans
+&trans       &kp LS(EXCL)                 &kp LS(AT)                   &kp LS(POUND)               &kp LS(DLLR)                 &kp LS(PRCNT)            &kp LS(CARET)  &kp LS(AMPS)     &kp LS(STAR)       &kp LS(LPAR)     &kp LS(RPAR)      &kp CAPSLOCK
+&trans       &lhmrow LCTRL NUMBER_1       &lhmrow LALT NUMBER_2        &lhmrow LSHFT NUMBER_3      &lhmrow LGUI NUMBER_4        &kp N5                   &kp NUMBER_6   &rhmrow RGUI N7  &rhmrow RSHIFT N8  &rhmrow RALT N9  &rhmrow RCTRL N0  &ht PLUS EQUAL
+&bootloader  &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACE  &ht LS(LA(LC(W))) LC(LEFT)  &ht LS(LC(LA(E))) LC(RIGHT)  &dt_ameth                &trans         &trans           &trans             &trans           &trans            &ht GRAVE TILDE
+                                                                       &kp LS(LA(B))               &trans                       &trans                   &trans         &trans
             >;
         };
     };
