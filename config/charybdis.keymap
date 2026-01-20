@@ -74,6 +74,50 @@
         };
     };
 
+    macros {
+        it_grav: it_grav {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(GRAVE) &kp E>;
+            label = "IT_GRAV";
+        };
+
+        it_shift_egrav: it_shift_egrav {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp E>;
+            label = "IT_SHIFT_EGRAV";
+        };
+
+        it_i: it_i {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(GRAVE) &kp I>;
+            label = "IT_I";
+        };
+
+        it_o: it_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(GRAVE) &kp O>;
+            label = "IT_O";
+        };
+
+        it_u: it_u {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(GRAVE) &kp U>;
+            label = "IT_U";
+        };
+
+        it_a: it_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(GRAVE) &kp A>;
+            label = "IT_A";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -106,10 +150,10 @@
 
         Italian {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans            &trans  &trans
+&kp C_PREV  &kp C_PP  &kp C_NEXT  &kp K_MUTE  &kp C_VOL_DN  &kp C_VOL_UP            &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans    &trans      &trans      &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans    &trans      &trans      &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                                  &trans      &trans        &trans                  &trans  &trans
             >;
         };
     };
