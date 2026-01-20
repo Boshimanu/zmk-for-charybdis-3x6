@@ -77,7 +77,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Base {
+        Colemak {
             bindings = <
 &ht LS(TAB) TAB         &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P           &kp G                  &kp J        &kp L           &kp U                &kp Y                    &ht COLON SEMICOLON  &ht PIPE NON_US_BACKSLASH
 &ht_bck BSPC BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T  &kp D                  &kp H        &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow RCTRL O      &ht DOUBLE_QUOTES SQT
@@ -86,12 +86,21 @@
             >;
         };
 
-        layer_1 {
+        Numbers {
             bindings = <
-&trans       &kp LS(EXCL)                 &kp LS(AT)                   &kp LS(POUND)               &kp LS(DLLR)                 &kp LS(PRCNT)            &kp LS(CARET)  &kp LS(AMPS)     &kp LS(STAR)       &kp LS(LPAR)     &kp LS(RPAR)      &kp CAPSLOCK
-&trans       &lhmrow LCTRL NUMBER_1       &lhmrow LALT NUMBER_2        &lhmrow LSHFT NUMBER_3      &lhmrow LGUI NUMBER_4        &kp N5                   &kp NUMBER_6   &rhmrow RGUI N7  &rhmrow RSHIFT N8  &rhmrow RALT N9  &rhmrow RCTRL N0  &ht PLUS EQUAL
-&bootloader  &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACE  &ht LS(LA(LC(W))) LC(LEFT)  &ht LS(LC(LA(E))) LC(RIGHT)  &dt_ameth                &trans         &trans           &trans             &trans           &trans            &ht GRAVE TILDE
-                                                                       &kp LS(LA(B))               &trans                       &trans                   &trans         &trans
+&trans       &kp LS(EXCL)                 &kp LS(AT)                   &kp LS(POUND)               &kp LS(DLLR)                 &kp LS(PRCNT)            &kp LS(CARET)   &kp LS(AMPS)          &kp LS(STAR)       &kp LS(LPAR)     &kp LS(RPAR)      &kp CAPSLOCK
+&trans       &lhmrow LCTRL NUMBER_1       &lhmrow LALT NUMBER_2        &lhmrow LSHFT NUMBER_3      &lhmrow LGUI NUMBER_4        &kp N5                   &kp NUMBER_6    &rhmrow RGUI N7       &rhmrow RSHIFT N8  &rhmrow RALT N9  &rhmrow RCTRL N0  &ht PLUS EQUAL
+&bootloader  &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACE  &ht LS(LA(LC(W))) LC(LEFT)  &ht LS(LC(LA(E))) LC(RIGHT)  &dt_ameth                &ht PLUS EQUAL  &ht UNDERSCORE MINUS  &trans             &trans           &trans            &ht GRAVE TILDE
+                                                                       &kp LS(LA(B))               &trans                       &trans                   &trans          &trans
+            >;
+        };
+
+        Move {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans            &trans  &trans
             >;
         };
     };
