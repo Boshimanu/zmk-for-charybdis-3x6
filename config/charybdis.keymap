@@ -296,8 +296,8 @@
         compatible = "zmk,conditional-layers";
 
         BT_SYS {
-            if-layers = <1>;
-            then-layer = <2>;
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
