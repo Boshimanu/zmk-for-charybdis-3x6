@@ -1,8 +1,9 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -11,7 +12,19 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        Escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <2 3>;
+        };
+
+        del {
+            bindings = <&kp DEL>;
+            key-positions = <3 4>;
+        };
+    };
 
     behaviors {
         ht: ht {
@@ -84,6 +97,24 @@
             quick-tap-ms = <50>;
             require-prior-idle-ms = <50>;
             flavor = "balanced";
+        };
+
+        raycast: raycast {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RAYCAST";
+            #binding-cells = <0>;
+            bindings = <&lt 5 LG(SPACE)>, <&kp LG(LC(SPACE))>;
+
+            tapping-term-ms = <180>;
+        };
+
+        leftcmd: leftcmd {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LEFTCMD";
+            #binding-cells = <0>;
+            bindings = <&lt 6 ENTER>, <&ht LGUI LA(B)>;
+
+            tapping-term-ms = <185>;
         };
     };
 
@@ -199,10 +230,10 @@
 
         Colemak {
             bindings = <
-&ht LS(TAB) TAB         &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P           &kp G                  &kp J        &kp L           &kp U                &kp Y                    &ht COLON SEMICOLON  &ht PIPE NON_US_BACKSLASH
-&ht_bck BSPC BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T  &kp D                  &kp H        &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow RCTRL O      &ht DOUBLE_QUOTES SQT
-&kp LSHFT               &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V     &ht LG(B) B            &kp K        &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH   &kp RSHFT
-                                                         &mkp LCLK         &mkp RCLK       &mkp MCLK              &lt 1 ENTER  &kp SPACE
+&ht LS(TAB) TAB         &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P           &kp G                      &kp J        &kp L           &kp U                &kp Y                    &ht COLON SEMICOLON  &ht PIPE NON_US_BACKSLASH
+&ht_bck BSPC BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T  &kp D                      &kp H        &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow RCTRL O      &ht DOUBLE_QUOTES SQT
+&kp LSHFT               &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V     &ht LS(LA(O)) B            &kp K        &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH   &kp RSHFT
+                                                         &raycast          &lt 1 SPACE     &leftcmd                   &lt 1 ENTER  &kp SPACE
             >;
         };
 
@@ -211,7 +242,7 @@
 &trans       &kp LS(EXCL)                 &kp LS(AT)                   &kp LS(POUND)               &kp LS(DLLR)                 &kp LS(PRCNT)            &kp LS(CARET)   &kp LS(AMPS)          &kp LS(STAR)       &kp LS(LPAR)     &kp LS(RPAR)      &kp CAPSLOCK
 &trans       &lhmrow LCTRL NUMBER_1       &lhmrow LALT NUMBER_2        &lhmrow LSHFT NUMBER_3      &lhmrow LGUI NUMBER_4        &kp N5                   &kp NUMBER_6    &rhmrow RGUI N7       &rhmrow RSHIFT N8  &rhmrow RALT N9  &rhmrow RCTRL N0  &ht PLUS EQUAL
 &bootloader  &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACE  &ht LS(LA(LC(W))) LC(LEFT)  &ht LS(LC(LA(E))) LC(RIGHT)  &dt_ameth                &ht PLUS EQUAL  &ht UNDERSCORE MINUS  &trans             &trans           &trans            &ht GRAVE TILDE
-                                                                       &kp LS(LA(B))               &trans                       &trans                   &trans          &trans
+                                                                       &kp LS(LA(B))               &lt 1 SPACE                  &trans                   &lt 4 ENTER     &lt 2 SPACE
             >;
         };
 
@@ -221,6 +252,15 @@
 &trans  &kp LCTRL  &kp LALT  &kp LSHFT  &kp LGUI  &kp RET              &kp LG(UP)    &kp LEFT      &kp DOWN  &kp RIGHT      &kp INS   &kp PAGE_DOWN
 &trans  &trans     &trans    &trans     &trans    &kp SPACE            &kp LG(DOWN)  &kp LG(LEFT)  &trans    &kp LG(RIGHT)  &kp HOME  &kp END
                              &trans     &trans    &trans               &trans        &trans
+            >;
+        };
+
+        BT_Sys {
+            bindings = <
+&kp F1       &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                  &kp F7        &kp F8    &kp F9     &kp F10   &kp F11    &kp F12
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &out OUT_USB  &kp RGUI  &kp RSHFT  &kp RALT  &kp LCTRL  &out OUT_BLE
+&bootloader  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                  &kp N6        &kp N7    &kp N8     &kp N9    &kp N0     &bootloader
+                                         &trans        &trans        &trans                  &trans        &trans
             >;
         };
 
@@ -242,13 +282,22 @@
             >;
         };
 
-        layer_5 {
+        Mouse {
             bindings = <
-&kp F1       &kp F2  &kp F3  &kp F4  &kp F5  &kp F6            &kp F7  &kp F8    &kp F9     &kp F10   &kp F11    &kp F12
-&trans       &trans  &trans  &trans  &trans  &trans            &trans  &kp RGUI  &kp RSHFT  &kp RALT  &kp LCTRL  &trans
-&bootloader  &trans  &trans  &trans  &trans  &trans            &trans  &trans    &trans     &trans    &trans     &bootloader
-                             &trans  &trans  &trans            &trans  &trans
+&trans          &trans    &trans          &msc SCRL_UP    &trans           &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LGUI  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans            &trans  &trans  &trans  &trans  &trans  &trans
+                                          &trans          &trans           &trans            &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        BT_SYS {
+            if-layers = <1>;
+            then-layer = <2>;
         };
     };
 };
