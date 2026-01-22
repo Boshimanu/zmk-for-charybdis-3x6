@@ -123,9 +123,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "WISPRFLOW";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(G))>, <&kp LC(LA(B))>;
+            bindings = <&kp LC(LA(G))>, <&ht LA(LC(P)) LC(LA(B))>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <190>;
         };
     };
 
