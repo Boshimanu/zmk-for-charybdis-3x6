@@ -286,10 +286,10 @@
 
         Emoji {
             bindings = <
-&trans  &trans   &elove     &efp           &ehmmm         &trans             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &elaugh  &esmile    &eok           &ethank        &esad              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &kp SPACE  &kp LA(LC(P))  &kp LC(LA(G))  &kp LA(LC(B))      &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans         &trans         &trans             &trans  &trans
+&trans  &trans   &elove     &efp       &ehmmm     &trans                 &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &elaugh  &esmile    &eok       &ethank    &esad                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp LA(LC(LG(G)))      &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans     &trans     &trans                 &trans  &trans
             >;
         };
 
