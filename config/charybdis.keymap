@@ -114,7 +114,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LEFTCMD";
             #binding-cells = <0>;
-            bindings = <&lt 6 ENTER>, <&ht LGUI LA(B)>;
+            bindings = <&ht LGUI LA(ENTER)>, <&Layers 6 6>;
 
             tapping-term-ms = <185>;
         };
@@ -126,6 +126,18 @@
             bindings = <&kp LC(LA(G))>, <&ht LA(LC(P)) LC(LA(B))>;
 
             tapping-term-ms = <190>;
+        };
+
+        Layers: Layers {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYERS";
+            bindings = <&mo>, <&to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <145>;
+            quick-tap-ms = <50>;
+            require-prior-idle-ms = <50>;
+            flavor = "balanced";
         };
     };
 
@@ -298,7 +310,7 @@
 &trans          &trans    &trans          &msc SCRL_UP    &trans           &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans          &trans    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_SHIFT  &kp LGUI  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                                          &trans          &trans           &trans      &trans  &trans
+                                          &trans          &trans           &to 0       &trans  &trans
             >;
         };
     };
