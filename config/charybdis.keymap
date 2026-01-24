@@ -423,7 +423,7 @@
         compatible = "zmk,conditional-layers";
 
         BT_SYS {
-            if-layers = <2 3>;
+            if-layers = <2 1>;
             then-layer = <3>;
         };
     };
