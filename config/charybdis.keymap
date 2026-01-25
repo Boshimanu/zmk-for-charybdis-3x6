@@ -417,6 +417,15 @@
                                           &trans          &trans           &to 0       &trans  &trans
             >;
         };
+
+        MouseSniper {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans      &trans  &trans
+            >;
+        };
     };
 
     conditional_layers {
