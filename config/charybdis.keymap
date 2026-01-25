@@ -208,7 +208,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LEFTCMD";
             #binding-cells = <0>;
-            bindings = <&ht LGUI ENTER>, <&Layers 6 6>;
+            bindings = <&ht LGUI ENTER>, <&to 6>;
 
             tapping-term-ms = <185>;
         };
@@ -411,14 +411,14 @@
 
         Mouse {
             bindings = <
-&trans          &trans    &trans          &msc SCRL_UP    &trans           &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LGUI  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                                          &trans          &trans           &to 0       &trans  &trans
+&trans          &trans    &trans     &kp LC(UP_ARROW)  &kp LC(DOWN)      &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans    &mkp LCLK  &mkp MCLK         &mkp RCLK         &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LGUI  &mkp LCLK  &mkp MCLK         &mkp RCLK         &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                                     &mo 7             &kp LC(UP_ARROW)  &to 0       &trans  &trans
             >;
         };
 
-        MouseSniper {
+        MouseScroll {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
