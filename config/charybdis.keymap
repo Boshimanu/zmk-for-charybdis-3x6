@@ -411,14 +411,23 @@
 
         Mouse {
             bindings = <
-&trans          &trans    &trans     &kp LC(UP_ARROW)  &kp LC(DOWN)      &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans    &mkp LCLK  &mkp MCLK         &mkp RCLK         &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LGUI  &mkp LCLK  &mkp MCLK         &mkp RCLK         &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                                     &mo 7             &kp LC(UP_ARROW)  &to 0       &trans  &trans
+&trans          &trans     &trans     &kp LC(UP_ARROW)  &kp LC(DOWN)  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &mo 8      &mkp LCLK  &mkp MCLK         &mkp RCLK     &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LCTRL  &mkp LCLK  &mkp MCLK         &mkp RCLK     &trans        &trans  &trans  &trans  &trans  &trans  &trans
+                                      &mo 7             &kp LALT      &kp LCMD      &trans  &trans
             >;
         };
 
         MouseScroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans      &trans  &trans
+            >;
+        };
+
+        MouseSniper {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
