@@ -411,10 +411,10 @@
 
         Mouse {
             bindings = <
-&trans          &trans     &trans     &kp LC(UP_ARROW)  &kp LC(DOWN)  &trans        &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &mo 8      &mkp LCLK  &mkp MCLK         &mkp RCLK     &trans        &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LCTRL  &mkp LCLK  &mkp MCLK         &mkp RCLK     &trans        &trans  &trans  &trans  &trans  &trans  &trans
-                                      &mo 7             &kp LALT      &kp LCMD      &trans  &trans
+&trans          &trans        &trans     &kp LC(UP_ARROW)  &kp LC(DOWN)  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &kp LEFT_ALT  &mkp LCLK  &mkp MCLK         &mkp RCLK     &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LCTRL     &mkp LCLK  &mkp MCLK         &mkp RCLK     &trans        &trans  &trans  &trans  &trans  &trans  &trans
+                                         &mo 7             &mo 8         &kp LCMD      &trans  &trans
             >;
         };
 
