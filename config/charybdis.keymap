@@ -429,10 +429,10 @@
 
         MouseSniper {
             bindings = <
-&trans  &trans  &trans     &kp LC(UP_ARROW)  &trans      &trans        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mkp LCLK  &mkp MCLK         &mkp RCLK   &trans        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mkp LCLK  &mkp MCLK         &mkp RCLK   &trans        &trans  &trans  &trans  &trans  &trans  &trans
-                           &kp LCTRL         &kp LSHIFT  &kp LCMD      &trans  &trans
+&trans    &trans     &trans     &kp LC(UP_ARROW)  &trans     &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &kp LSHFT  &mkp LCLK  &mkp MCLK         &mkp RCLK  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCMD  &kp LCTRL  &mkp LCLK  &mkp MCLK         &mkp RCLK  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans            &trans     &trans      &trans  &trans
             >;
         };
     };
