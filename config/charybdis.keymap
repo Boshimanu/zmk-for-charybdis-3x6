@@ -359,7 +359,7 @@
             bindings = <
 &ht LS(TAB) TAB             &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P           &kp G                &kp J        &kp L           &kp U                &kp Y                    &ht COLON SEMICOLON  &ht PIPE BACKSLASH
 &ht_bck LA(BSPC) BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T  &kp D                &kp H        &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow RCTRL O      &ht DOUBLE_QUOTES SQT
-&WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V     &ht LS(LA(O)) B      &kp K        &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH   &bootloader
+&WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V     &ht LS(LA(O)) B      &kp K        &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH   &tog 8
                                                              &raycast          &lt 1 SPACE     &leftcmd             &lt 4 ENTER  &lt 2 SPACE
             >;
         };
@@ -411,10 +411,10 @@
 
         Mouse {
             bindings = <
-&trans  &trans  &trans  &trans     &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans  &trans         &trans  &trans  &trans  &trans  &mo 8   &kp LC(UP_ARROW)
-                        &mkp LCLK  &mo 7   &mkp RCLK      &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &kp LC(UP_ARROW)
+&trans  &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &mo 8   &trans
+                        &mkp LCLK  &mkp RCLK  &mo 7       &trans  &trans
             >;
         };
 
@@ -429,10 +429,10 @@
 
         MouseSniper {
             bindings = <
-&trans    &trans     &trans     &kp LC(UP_ARROW)  &trans     &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans    &kp LSHFT  &mkp LCLK  &mkp MCLK         &mkp RCLK  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCMD  &kp LCTRL  &mkp LCLK  &mkp MCLK         &mkp RCLK  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans            &trans     &trans      &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans         &trans  &trans  &trans  &trans  &trans  &trans
+                        &mkp LCLK  &mkp RCLK  &mkp MCLK      &trans  &trans
             >;
         };
     };
