@@ -411,9 +411,9 @@
 
         Mouse {
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &to 8
+&trans  &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &tog 8
 &trans  &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &kt LC(UP_ARROW)
-&trans  &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &mo 8
+&trans  &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &trans
                         &mkp LCLK  &mkp RCLK  &mo 7       &trans  &trans
             >;
         };
@@ -429,7 +429,7 @@
 
         MouseSniper {
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans         &trans  &trans  &trans  &trans  &trans  &to 6
+&trans  &trans  &trans  &trans     &trans     &trans         &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans         &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans         &trans  &trans  &trans  &trans  &trans  &trans
                         &mkp LCLK  &mkp RCLK  &mkp MCLK      &trans  &trans
