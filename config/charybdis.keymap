@@ -412,7 +412,7 @@
         Mouse {
             bindings = <
 &trans  &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &to 8
-&trans  &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &kp LC(UP_ARROW)
+&trans  &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &kt LC(UP_ARROW)
 &trans  &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &mo 8   &trans
                         &mkp LCLK  &mkp RCLK  &mo 7       &trans  &trans
             >;
