@@ -240,7 +240,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <185>;
             bindings =
-                <&ht LG(LS(LC(NUMBER_4))) LS(LC(LG(NUMBER_2)))>,
+                <&ht LG(LS(LC(NUMBER_4))) LS(LG(NUMBER_2))>,
                 <&ht LS(LG(N5)) LS(LG(NUMBER_4))>;
         };
     };
@@ -411,10 +411,10 @@
 
         Mouse {
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &to 8
-&trans  &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &kt LC(UP_ARROW)
-&trans  &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &to 0
-                        &mkp LCLK  &mkp RCLK  &mo 7       &trans  &trans
+&kp LC(UP_ARROW)  &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &to 8
+&trans            &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans            &trans  &trans  &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &to 0
+                                  &mkp LCLK  &mkp RCLK  &mo 7       &trans  &trans
             >;
         };
 
