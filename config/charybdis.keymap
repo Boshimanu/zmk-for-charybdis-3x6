@@ -437,7 +437,7 @@
 &kp LC(UP_ARROW)  &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &to 8
 &trans            &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans            &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &to 0
-                                  &mkp LCLK  &leftClick 1 LCLK  &mo 7       &trans  &trans
+                                  &mkp LCLK  &leftClick 1 RCLK  &mo 7       &trans  &trans
             >;
         };
 
