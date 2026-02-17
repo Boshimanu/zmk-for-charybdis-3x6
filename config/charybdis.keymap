@@ -20,104 +20,104 @@
         Escape {
             bindings = <&kp ESCAPE>;
             key-positions = <2 3>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             layers = <0 2 1>;
         };
 
         del {
             bindings = <&kp DEL>;
             key-positions = <3 4>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             layers = <0 2 1>;
         };
 
         cmd_shift_left {
             bindings = <&kp LG(LSHIFT)>;
             key-positions = <16 15>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             layers = <0 2 1>;
         };
 
         cmd_shift_right {
             bindings = <&kp RG(RSHIFT)>;
             key-positions = <19 20>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             layers = <0 2 1>;
         };
 
         ctrl_cmd_left {
             bindings = <&kp LC(LCMD)>;
             key-positions = <16 13>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             layers = <0 2 1>;
         };
 
         ctrl_cmd_right {
             bindings = <&kp RC(RGUI)>;
             key-positions = <19 22>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             layers = <0 2 1>;
         };
 
         alt_cmd_right {
             bindings = <&kp RG(RIGHT_ALT)>;
             key-positions = <21 19>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             layers = <0 2 1>;
         };
 
         alt_cmd_left {
             bindings = <&kp LG(LEFT_ALT)>;
             key-positions = <16 14>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             layers = <0 2 1>;
         };
 
         alt_shift_left {
             bindings = <&kp LA(LSHIFT)>;
             key-positions = <14 15>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             layers = <0 2 1>;
         };
 
         alt_shift_right {
             bindings = <&kp RA(RSHIFT)>;
             key-positions = <20 21>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             layers = <0 2 1>;
         };
 
         ctrl_alt_shift {
             bindings = <&kp LA(LC(LSHIFT))>;
             key-positions = <13 14 15>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             layers = <0 1 2>;
         };
 
         ctrl_alt_shift_right {
             bindings = <&kp RA(RC(RSHIFT))>;
             key-positions = <20 21 22>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             layers = <0 1 2>;
         };
 
         shortcat {
             bindings = <&kp RG(RS(RA(SLASH)))>;
             key-positions = <8 9>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
             layers = <0 1 2>;
         };
     };
