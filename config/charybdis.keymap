@@ -82,7 +82,7 @@
         };
 
         alt_shift_left {
-            bindings = <&kp LA(LSHIFT)>;
+            bindings = <&kp LS(LEFT_ALT)>;
             key-positions = <14 15>;
             timeout-ms = <100>;
             require-prior-idle-ms = <0>;
@@ -456,6 +456,15 @@
 &trans  &trans  &trans  &trans     &trans     &trans         &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans         &trans  &trans  &trans  &trans  &trans  &to 0
                         &mkp LCLK  &mkp RCLK  &mkp MCLK      &trans  &trans
+            >;
+        };
+
+        Amethyst {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans      &trans  &trans
             >;
         };
     };
