@@ -205,7 +205,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LEFTCMD";
             #binding-cells = <0>;
-            bindings = <&ht LGUI ENTER>, <&to 6>;
+            bindings = <&lt 9 ENTER>, <&to 6>;
 
             tapping-term-ms = <185>;
         };
@@ -458,11 +458,13 @@
 
         Amethyst {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans      &trans  &trans
+&none     &none  &none  &none  &none  &none      &none          &kp LS(LA(L))     &kp LS(LA(U))      &none            &kp LS(LA(LC(LEFT)))  &kp LA(LS(LC(RIGHT)))
+&kp SEMI  &none  &none  &none  &none  &none      &none          &kp LA(LS(N))     &kp LS(LA(E))      &none            &none                 &none
+&none     &none  &none  &none  &none  &none      &kp LS(LA(J))  &kp LS(LA(K))     &kp LS(LA(COMMA))  &kp LS(LA(DOT))  &none                 &none
+                        &none  &none  &none      &kp LS(LA(O))  &kp LS(LA(SEMI))
             >;
+
+            label = "Amethyst";
         };
     };
 
