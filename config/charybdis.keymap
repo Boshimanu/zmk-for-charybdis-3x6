@@ -458,10 +458,10 @@
 
         Amethyst {
             bindings = <
-&none             &none  &none  &none         &none          &none      &none          &kp LS(LA(L))  &kp LS(LA(U))      &none                 &kp LS(LA(ENTER))      &kp LA(LS(SPACE))
-&kp LA(LS(SEMI))  &none  &none  &kp LC(LEFT)  &kp LC(RIGHT)  &none      &none          &kp LA(LS(N))  &kp LS(LA(E))      &kp LA(LS(LC(LEFT)))  &kp LS(LA(LC(RIGHT)))  &none
-&none             &none  &none  &none         &none          &none      &kp LS(LA(K))  &kp LS(LA(J))  &kp LS(LA(COMMA))  &kp LS(LA(DOT))       &none                  &none
-                                &none         &none          &none      &kp O          &kp LS(LA(O))
+&none   &none                  &none  &none         &none          &none              &none          &kp LS(LA(L))  &kp LS(LA(U))      &none                 &kp LS(LA(ENTER))      &kp LA(LS(SPACE))
+&trans  &kp LS(LA(SEMICOLON))  &none  &kp LC(LEFT)  &kp LC(RIGHT)  &none              &none          &kp LA(LS(N))  &kp LS(LA(E))      &kp LA(LS(LC(LEFT)))  &kp LS(LA(LC(RIGHT)))  &none
+&none   &none                  &none  &none         &none          &kp LS(LA(B))      &kp LS(LA(K))  &kp LS(LA(J))  &kp LS(LA(COMMA))  &kp LS(LA(DOT))       &none                  &none
+                                      &none         &none          &none              &kp LS(LA(D))  &kp LS(LA(O))
             >;
 
             label = "Amethyst";
