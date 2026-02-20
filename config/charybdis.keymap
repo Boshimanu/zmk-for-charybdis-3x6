@@ -84,8 +84,8 @@
         alt_shift_left {
             bindings = <&kp LA(LSHIFT)>;
             key-positions = <14 15>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <100>;
+            require-prior-idle-ms = <0>;
             layers = <0 2 1>;
         };
 
