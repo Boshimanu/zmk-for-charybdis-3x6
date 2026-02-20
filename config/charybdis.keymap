@@ -232,18 +232,6 @@
                 <&ht LS(LG(N5)) LS(LG(NUMBER_4))>;
         };
 
-        mouse: mouse {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOUSE";
-            bindings = <&mo>, <&to>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <50>;
-            require-prior-idle-ms = <50>;
-            flavor = "hold-preferred";
-        };
-
         leftClick: leftClick {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFTCLICK";
@@ -253,6 +241,15 @@
             require-prior-idle-ms = <50>;
             flavor = "balanced";
             bindings = <&mo>, <&mkp>;
+        };
+
+        Mouse: Mouse {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MOUSE";
+            #binding-cells = <0>;
+            bindings = <&mo 6>, <&to 6>;
+
+            tapping-term-ms = <190>;
         };
     };
 
@@ -370,7 +367,7 @@
             bindings = <
 &ht LS(TAB) TAB             &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P           &kp G                &kp J        &kp L           &kp U                &ht LA(LG(LS(Y))) Y      &ht COLON SEMICOLON  &ht PIPE BACKSLASH
 &ht_bck LA(BSPC) BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T  &kp D                &kp H        &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow RCTRL O      &ht DOUBLE_QUOTES SQT
-&WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V     &ht LS(LA(O)) B      &kp K        &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH   &mouse 6 6
+&WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V     &ht LS(LA(O)) B      &kp K        &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH   &Mouse
                                                              &raycast          &lt 1 SPACE     &lt 9 SPACE          &lt 4 ENTER  &lt 2 SPACE
             >;
         };
@@ -449,7 +446,7 @@
 
         Amethyst {
             bindings = <
-&none   &none            &none                  &none         &none          &none              &none              &kp LS(LA(L))      &kp LS(LA(U))  &none                 &kp LS(LA(ENTER))      &kp LA(LS(SPACE))
+&none   &none            &none                  &none         &none          &none              &kp LA(LS(B))      &kp LS(LA(L))      &kp LS(LA(U))  &none                 &kp LS(LA(ENTER))      &kp LA(LS(SPACE))
 &trans  &kp LS(LA(SQT))  &kp LS(LA(SEMICOLON))  &kp LC(LEFT)  &kp LC(RIGHT)  &none              &kp LS(LA(T))      &kp LA(LS(N))      &kp LS(LA(E))  &kp LA(LS(LC(LEFT)))  &kp LS(LA(LC(RIGHT)))  &none
 &none   &none            &none                  &none         &none          &kp LS(LA(B))      &kp LS(LA(D))      &kp LS(LA(LG(K)))  &kp LS(LA(J))  &none                 &kp LS(LA(COMMA))      &kp LS(LA(PERIOD))
                                                 &none         &none          &none              &kp LS(LA(LC(Z)))  &kp LS(LA(O))
