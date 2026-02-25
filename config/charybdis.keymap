@@ -136,7 +136,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
-            quick-tap-ms = <50>;
+            quick-tap-ms = <70>;
             require-prior-idle-ms = <100>;
             flavor = "tap-preferred";
             hold-trigger-key-positions = <6 7 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 8 39 40 0>;
@@ -363,7 +363,7 @@
 &ht LS(TAB) TAB             &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P           &kp G                &kp J        &kp L           &kp U                &ht LA(LG(LS(Y))) Y      &ht COLON SEMICOLON  &ht PIPE BACKSLASH
 &ht_bck LA(BSPC) BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T  &kp D                &kp H        &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow RCTRL O      &ht DOUBLE_QUOTES SQT
 &WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V     &ht LS(LA(O)) B      &kp K        &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH   &Mouse
-                                                             &raycast          &lt 1 SPACE     &lt 9 ENTER          &lt 4 ENTER  &lt 2 SPACE
+                                                             &raycast          &lt 1 SPACE     &ameth 9 ENTER       &lt 4 ENTER  &lt 2 SPACE
             >;
         };
 
