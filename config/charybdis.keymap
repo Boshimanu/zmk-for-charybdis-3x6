@@ -206,19 +206,21 @@
             bindings = <&mo>, <&mkp>;
         };
 
-        Mouse: Mouse {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MOUSE";
-            #binding-cells = <0>;
-            bindings = <&mo 6>, <&to 6>;
-
-            tapping-term-ms = <200>;
-        };
-
         ameth: ameth {
             compatible = "zmk,behavior-hold-tap";
             label = "AMETH";
             bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <50>;
+            hold-while-undecided;
+        };
+
+        mouse: mouse {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOUSE";
+            bindings = <&mo>, <&to>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
@@ -341,7 +343,7 @@
             bindings = <
 &ht LS(TAB) TAB             &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P           &kp G               &kp J        &kp L           &kp U                &ht LA(LG(LS(Y))) Y      &ht COLON SEMICOLON  &ht PIPE BACKSLASH
 &ht_bck LA(BSPC) BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T  &kp D               &kp H        &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow RCTRL O      &ht DOUBLE_QUOTES SQT
-&WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V     &ht LG(B) B         &kp K        &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH   &Mouse
+&WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V     &ht LG(B) B         &kp K        &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH   &mouse 6 6
                                                              &raycast          &lt 1 SPACE     &ameth 9 ENTER      &lt 4 ENTER  &lt 2 SPACE
             >;
         };
