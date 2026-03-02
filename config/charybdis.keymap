@@ -212,9 +212,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick-tap-ms = <50>;
-            hold-while-undecided;
+            tapping-term-ms = <160>;
         };
 
         mouse: mouse {
@@ -223,9 +221,7 @@
             bindings = <&mo>, <&to>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick-tap-ms = <50>;
-            hold-while-undecided;
+            tapping-term-ms = <160>;
         };
     };
 
