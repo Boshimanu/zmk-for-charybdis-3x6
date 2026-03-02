@@ -395,10 +395,10 @@
 
         Mouse {
             bindings = <
-&kp LC(UP_ARROW)  &trans  &trans  &trans     &trans             &trans         &trans  &trans  &trans  &trans  &trans  &to 8
-&trans            &trans  &trans  &trans     &trans             &trans         &trans  &trans  &trans  &trans  &trans  &trans
-&trans            &trans  &trans  &trans     &trans             &kp SPACE      &trans  &trans  &trans  &trans  &trans  &to 0
-                                  &mkp LCLK  &leftClick 1 RCLK  &mo 7          &trans  &trans
+&kp LC(UP_ARROW)  &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &to 8
+&trans            &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&kp SPACE         &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &to 0
+                                  &mkp LCLK  &leftClick 1 RCLK  &mo 7       &trans  &trans
             >;
         };
 
