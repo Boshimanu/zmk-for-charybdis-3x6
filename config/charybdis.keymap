@@ -370,7 +370,7 @@
 
         Amethyst {
             bindings = <
-&none   &none            &none                  &none              &none          &none      &none          &kp LS(LA(L))  &kp LS(LA(U))  &none                 &kp LS(LA(ENTER))      &kp LA(LS(SPACE))
+&none   &none            &none                  &none              &none          &none      &kp LA(LS(A))  &kp LS(LA(L))  &kp LS(LA(U))  &none                 &kp LS(LA(ENTER))      &kp LA(LS(SPACE))
 &trans  &kp LS(LA(SQT))  &kp LS(LA(SEMICOLON))  &kp LC(LEFT)       &kp LC(RIGHT)  &none      &kp LS(LA(T))  &kp LA(LS(N))  &kp LS(LA(E))  &kp LA(LS(LC(LEFT)))  &kp LS(LA(LC(RIGHT)))  &none
 &none   &none            &none                  &none              &none          &none      &kp LS(LA(D))  &kp LS(LA(K))  &kp LS(LA(J))  &none                 &kp LS(LA(COMMA))      &kp LS(LA(PERIOD))
                                                 &kp LS(LA(LC(Z)))  &none          &none      &kp LS(LA(B))  &kp LS(LA(O))
