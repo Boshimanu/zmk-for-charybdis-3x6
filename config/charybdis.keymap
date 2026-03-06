@@ -336,7 +336,7 @@
 &trans  &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                        &mkp LCLK  &leftClick 1 LCLK  &mo 7       &trans  &trans
+                        &mkp LCLK  &leftClick 1 RCLK  &mo 7       &trans  &trans
             >;
         };
 
