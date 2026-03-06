@@ -163,6 +163,8 @@
             label = "SCROLL_AMETHYST";
             #binding-cells = <0>;
             bindings = <&mo 7>, <&mo 9>;
+
+            tapping-term-ms = <130>;
         };
 
         TD0_ameth: TD0_ameth {
@@ -170,6 +172,8 @@
             label = "TD0_AMETH";
             #binding-cells = <0>;
             bindings = <&ameth 9 ENTER>, <&mo 9>;
+
+            tapping-term-ms = <180>;
         };
     };
 
@@ -339,10 +343,10 @@
 
         Mouse {
             bindings = <
-&trans  &trans  &trans  &trans     &trans             &trans                &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans             &trans                &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans             &trans                &trans  &trans  &trans  &trans  &trans  &trans
-                        &mkp LCLK  &leftClick 1 RCLK  &Scroll_amethyst      &trans  &trans
+&trans  &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                        &mkp LCLK  &leftClick 1 RCLK  &mo 7       &trans  &trans
             >;
         };
 
