@@ -21,21 +21,21 @@
             bindings = <&kp ESCAPE>;
             key-positions = <2 3>;
             timeout-ms = <50>;
-            layers = <0 2 1>;
+            layers = <0 2 1 6 7 8 9>;
         };
 
         del {
             bindings = <&kp DEL>;
             key-positions = <3 4>;
             timeout-ms = <50>;
-            layers = <0 2 1>;
+            layers = <0 2 1 6 7 5 8 9>;
         };
 
         Space {
             bindings = <&kp SPACE>;
             key-positions = <27 28>;
             timeout-ms = <50>;
-            layers = <0 2 1 6 7>;
+            layers = <0 2 1 6 7 8>;
         };
 
         Expose {
