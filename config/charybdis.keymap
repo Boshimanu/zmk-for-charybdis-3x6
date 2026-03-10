@@ -329,10 +329,10 @@
 
         Numbers {
             bindings = <
-&trans         &kp LS(EXCL)                 &kp LS(AT)                     &kp LS(POUND)               &kp LS(DLLR)                 &kp LS(PRCNT)      &kp LS(CARET)   &kp LS(AMPS)          &kp LS(STAR)       &kp LS(LPAR)     &kp LS(RPAR)      &kp CAPSLOCK
-&kp BACKSPACE  &lhmrow LCTRL NUMBER_1       &lhmrow LALT NUMBER_2          &lhmrow LSHFT NUMBER_3      &lhmrow LGUI NUMBER_4        &kp N5             &kp NUMBER_6    &rhmrow RGUI N7       &rhmrow RSHIFT N8  &rhmrow RALT N9  &rhmrow RCTRL N0  &ht PLUS EQUAL
-&mk_capt       &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACKET  &ht LS(LA(LC(W))) LC(LEFT)  &ht LS(LC(LA(E))) LC(RIGHT)  &trans             &ht PLUS EQUAL  &ht UNDERSCORE MINUS  &trans             &trans           &trans            &ht GRAVE TILDE
-                                                                           &kp LS(LA(B))               &lt 2 SPACE                  &trans             &lt 4 ENTER     &lt 3 SPACE
+&trans         &kp LS(EXCL)            &kp LS(AT)             &kp LS(POUND)                      &kp LS(DLLR)                         &kp LS(PRCNT)      &kp LS(CARET)   &kp LS(AMPS)          &kp LS(STAR)       &kp LS(LPAR)     &kp LS(RPAR)      &kp CAPSLOCK
+&kp BACKSPACE  &lhmrow LCTRL NUMBER_1  &lhmrow LALT NUMBER_2  &lhmrow LSHFT NUMBER_3             &lhmrow LGUI NUMBER_4                &kp N5             &kp NUMBER_6    &rhmrow RGUI N7       &rhmrow RSHIFT N8  &rhmrow RALT N9  &rhmrow RCTRL N0  &ht PLUS EQUAL
+&mk_capt       &kp LEFT_BRACE          &kp RIGHT_BRACE        &ht LG(LEFT_BRACKET) LEFT_BRACKET  &ht LG(RIGHT_BRACKET) RIGHT_BRACKET  &trans             &ht PLUS EQUAL  &ht UNDERSCORE MINUS  &trans             &trans           &trans            &ht GRAVE TILDE
+                                                              &kp LS(LA(B))                      &lt 2 SPACE                          &trans             &lt 4 ENTER     &lt 3 SPACE
             >;
         };
 
