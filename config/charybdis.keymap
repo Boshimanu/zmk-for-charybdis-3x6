@@ -198,6 +198,14 @@
 
             tapping-term-ms = <180>;
         };
+
+        TD1_mlayer: TD1_mlayer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD1_MLAYER";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&leftClick 1 RCLK>, <&mo 9>;
+        };
     };
 
     macros {
@@ -366,10 +374,10 @@
 
         Mouse {
             bindings = <
-&trans  &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                        &mkp LCLK  &leftClick 1 RCLK  &mo 7       &trans  &trans
+&trans  &trans  &trans  &trans     &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                        &mkp LCLK  &TD1_mlayer  &mo 7       &trans  &trans
             >;
         };
 
