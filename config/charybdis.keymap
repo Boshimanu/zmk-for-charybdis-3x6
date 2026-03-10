@@ -21,42 +21,42 @@
             bindings = <&kp ESCAPE>;
             key-positions = <2 3>;
             timeout-ms = <50>;
-            layers = <0 2 1 6 7 8 9>;
+            layers = <0 2 1 5 6 7 10>;
         };
 
         del {
             bindings = <&kp DEL>;
             key-positions = <3 4>;
             timeout-ms = <50>;
-            layers = <0 2 1 6 7 5 8 9>;
+            layers = <0 2 1 5 6 4 7 10>;
         };
 
         Space {
             bindings = <&kp SPACE>;
             key-positions = <27 28>;
             timeout-ms = <50>;
-            layers = <0 2 1 6 7 8>;
+            layers = <0 2 1 5 6 7>;
         };
 
         Expose {
             bindings = <&kp LC(UP_ARROW)>;
             key-positions = <31 32>;
             timeout-ms = <50>;
-            layers = <0 2 1 6 7>;
+            layers = <0 2 1 5 6>;
         };
 
         Rshift_Rcmd {
             bindings = <&kp RS(RCMD)>;
             key-positions = <19 20>;
             timeout-ms = <30>;
-            layers = <0 2 1 6 7>;
+            layers = <0 2 1 5 6>;
         };
 
         Lshift_Lcmd {
             bindings = <&kp LS(LCMD)>;
             key-positions = <15 16>;
             timeout-ms = <30>;
-            layers = <0 2 1 6 7>;
+            layers = <0 2 1 5 6>;
         };
     };
 
@@ -128,7 +128,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "RAYCAST";
             #binding-cells = <0>;
-            bindings = <&lt 5 LG(SPACE)>, <&kp LG(LC(SPACE))>;
+            bindings = <&lt 4 LG(SPACE)>, <&kp LG(LC(SPACE))>;
 
             tapping-term-ms = <180>;
         };
@@ -169,24 +169,6 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-        };
-
-        Scroll_amethyst: Scroll_amethyst {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SCROLL_AMETHYST";
-            #binding-cells = <0>;
-            bindings = <&mo 7>, <&mo 9>;
-
-            tapping-term-ms = <130>;
-        };
-
-        TD0_ameth: TD0_ameth {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD0_AMETH";
-            #binding-cells = <0>;
-            bindings = <&ameth 9 ENTER>, <&mo 9>;
-
             tapping-term-ms = <180>;
         };
 
@@ -323,7 +305,7 @@
 &ht LS(TAB) TAB             &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P           &kp G            &kp J        &kp L           &kp U                &ht LA(LG(LS(Y))) Y      &ht COLON SEMICOLON  &ht PIPE BACKSLASH
 &ht_bck LA(BSPC) BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T  &kp D            &kp H        &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow RCTRL O      &ht DOUBLE_QUOTES SQT
 &WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V     &ht LG(B) B      &kp K        &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH   &ht LC(DOWN) LC(UP_ARROW)
-                                                             &raycast          &TD1            &lt 7 ENTER      &lt 4 ENTER  &lt 2 SPACE
+                                                             &raycast          &TD1            &lt 6 ENTER      &lt 3 ENTER  &lt 2 SPACE
             >;
         };
 
@@ -332,7 +314,7 @@
 &trans         &kp LS(EXCL)            &kp LS(AT)             &kp LS(POUND)                      &kp LS(DLLR)                         &kp LS(PRCNT)      &kp LS(CARET)   &kp LS(AMPS)          &kp LS(STAR)       &kp LS(LPAR)     &kp LS(RPAR)      &kp CAPSLOCK
 &kp BACKSPACE  &lhmrow LCTRL NUMBER_1  &lhmrow LALT NUMBER_2  &lhmrow LSHFT NUMBER_3             &lhmrow LGUI NUMBER_4                &kp N5             &kp NUMBER_6    &rhmrow RGUI N7       &rhmrow RSHIFT N8  &rhmrow RALT N9  &rhmrow RCTRL N0  &ht PLUS EQUAL
 &mk_capt       &kp LEFT_BRACE          &kp RIGHT_BRACE        &ht LG(LEFT_BRACKET) LEFT_BRACKET  &ht LG(RIGHT_BRACKET) RIGHT_BRACKET  &trans             &ht PLUS EQUAL  &ht UNDERSCORE MINUS  &trans             &trans           &trans            &ht GRAVE TILDE
-                                                              &kp LS(LA(B))                      &lt 2 SPACE                          &trans             &lt 4 ENTER     &lt 3 SPACE
+                                                              &trans                             &trans                               &trans             &trans          &trans
             >;
         };
 
@@ -342,15 +324,6 @@
 &kp BACKSPACE  &kp LCTRL  &kp LALT  &kp LSHFT  &kp LGUI  &kp RET        &kp LG(UP)    &kp LEFT      &kp DOWN  &kp RIGHT      &kp INS   &kp PAGE_DOWN
 &trans         &trans     &trans    &trans     &trans    &kp SPACE      &kp LG(DOWN)  &kp LG(LEFT)  &trans    &kp LG(RIGHT)  &kp HOME  &kp END
                                     &trans     &trans    &trans         &trans        &trans
-            >;
-        };
-
-        BT_Sys {
-            bindings = <
-&kp F1       &kp F2        &kp F3        &kp F4        &kp F5        &kp F6            &kp F7        &kp F8    &kp F9     &kp F10   &kp F11    &kp F12
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &out OUT_USB  &kp RGUI  &kp RSHFT  &kp RALT  &kp LCTRL  &out OUT_BLE
-&bootloader  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            &kp N6        &kp N7    &kp N8     &kp N9    &kp N0     &bootloader
-                                         &trans        &trans        &trans            &trans        &trans
             >;
         };
 
@@ -377,7 +350,7 @@
 &trans  &trans  &trans  &trans     &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                        &mkp LCLK  &TD1_mlayer  &mo 7       &trans  &trans
+                        &mkp LCLK  &TD1_mlayer  &mo 6       &trans  &trans
             >;
         };
 
@@ -392,10 +365,19 @@
 
         MouseSniper {
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans         &trans  &trans  &trans  &trans  &trans  &to 6
+&trans  &trans  &trans  &trans     &trans     &trans         &trans  &trans  &trans  &trans  &trans  &to 5
 &trans  &trans  &trans  &trans     &trans     &trans         &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans         &trans  &trans  &trans  &trans  &trans  &to 0
                         &mkp LCLK  &mkp RCLK  &mkp MCLK      &trans  &trans
+            >;
+        };
+
+        BT_Sys {
+            bindings = <
+&kp F1       &kp F2        &kp F3        &kp F4        &kp F5        &kp F6            &kp F7        &kp F8    &kp F9     &kp F10   &kp F11    &kp F12
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &out OUT_USB  &kp RGUI  &kp RSHFT  &kp RALT  &kp LCTRL  &out OUT_BLE
+&bootloader  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            &kp N6        &kp N7    &kp N8     &kp N9    &kp N0     &bootloader
+                                         &trans        &trans        &trans            &trans        &trans
             >;
         };
 
@@ -415,8 +397,8 @@
         compatible = "zmk,conditional-layers";
 
         BT_SYS {
-            if-layers = <2 1>;
-            then-layer = <3>;
+            if-layers = <3 6>;
+            then-layer = <8>;
         };
     };
 };
