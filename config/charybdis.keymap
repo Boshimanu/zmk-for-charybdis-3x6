@@ -189,6 +189,15 @@
 
             tapping-term-ms = <180>;
         };
+
+        TD1: TD1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD1";
+            #binding-cells = <0>;
+            bindings = <&lt 1 SPACE>, <&mo 9>;
+
+            tapping-term-ms = <180>;
+        };
     };
 
     macros {
@@ -306,7 +315,7 @@
 &ht LS(TAB) TAB             &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P           &kp G            &kp J        &kp L           &kp U                &ht LA(LG(LS(Y))) Y      &ht COLON SEMICOLON  &ht PIPE BACKSLASH
 &ht_bck LA(BSPC) BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T  &kp D            &kp H        &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow RCTRL O      &ht DOUBLE_QUOTES SQT
 &WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V     &ht LG(B) B      &kp K        &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH   &ht LC(DOWN) LC(UP_ARROW)
-                                                             &raycast          &lt 1 SPACE     &TD0_ameth       &lt 4 ENTER  &lt 2 SPACE
+                                                             &raycast          &TD1            &lt 7 ENTER      &lt 4 ENTER  &lt 2 SPACE
             >;
         };
 
