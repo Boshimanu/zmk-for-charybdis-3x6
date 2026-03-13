@@ -301,18 +301,18 @@
 
         Colemak {
             bindings = <
-&ht LS(TAB) TAB             &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P           &kp G            &kp J        &kp L           &kp U                &ht LA(LG(LS(Y))) Y      &ht COLON SEMICOLON  &ht PIPE BACKSLASH
-&ht_bck LA(BSPC) BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T  &kp D            &kp H        &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow RCTRL O      &ht DOUBLE_QUOTES SQT
-&WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V     &ht LG(B) B      &kp K        &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH   &ht LC(DOWN) LC(UP_ARROW)
+&ht LS(TAB) TAB             &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P           &kp G            &kp J        &kp L           &kp U                &ht LA(LG(LS(Y))) Y      &ht COLON SEMICOLON     &ht PIPE BACKSLASH
+&ht_bck LA(BSPC) BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T  &kp D            &kp H        &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow LEFT_CONTROL O  &ht DOUBLE_QUOTES SQT
+&WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V     &ht LG(B) B      &kp K        &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH      &ht LC(DOWN) LC(UP_ARROW)
                                                              &raycast          &TD1            &lt 6 ENTER      &lt 3 ENTER  &lt 2 SPACE
             >;
         };
 
         Numbers {
             bindings = <
-&trans         &kp LS(EXCL)                &kp LS(AT)               &kp LS(POUND)                      &kp LS(DLLR)                         &kp LS(PRCNT)      &kp LS(CARET)   &kp LS(AMPS)          &kp LS(STAR)       &kp LS(LPAR)     &kp LS(RPAR)      &kp CAPSLOCK
-&kp BACKSPACE  &lhmrow LCTRL NUMBER_1      &lhmrow LALT NUMBER_2    &lhmrow LSHFT NUMBER_3             &lhmrow LGUI NUMBER_4                &kp N5             &kp NUMBER_6    &rhmrow RGUI N7       &rhmrow RSHIFT N8  &rhmrow RALT N9  &rhmrow RCTRL N0  &ht PLUS EQUAL
-&mk_capt       &ht LC(LS(TAB)) LEFT_BRACE  &ht LC(TAB) RIGHT_BRACE  &ht LG(LEFT_BRACKET) LEFT_BRACKET  &ht LG(RIGHT_BRACKET) RIGHT_BRACKET  &trans             &ht PLUS EQUAL  &ht UNDERSCORE MINUS  &trans             &trans           &trans            &ht GRAVE TILDE
+&trans         &kp LS(EXCL)                &kp LS(AT)               &kp LS(POUND)                      &kp LS(DLLR)                         &kp LS(PRCNT)      &kp LS(CARET)   &kp LS(AMPS)          &kp LS(STAR)       &kp LS(LPAR)     &kp LS(RPAR)             &kp CAPSLOCK
+&kp BACKSPACE  &lhmrow LCTRL NUMBER_1      &lhmrow LALT NUMBER_2    &lhmrow LSHFT NUMBER_3             &lhmrow LGUI NUMBER_4                &kp N5             &kp NUMBER_6    &rhmrow RGUI N7       &rhmrow RSHIFT N8  &rhmrow RALT N9  &rhmrow LEFT_CONTROL N0  &ht PLUS EQUAL
+&mk_capt       &ht LC(LS(TAB)) LEFT_BRACE  &ht LC(TAB) RIGHT_BRACE  &ht LG(LEFT_BRACKET) LEFT_BRACKET  &ht LG(RIGHT_BRACKET) RIGHT_BRACKET  &trans             &ht PLUS EQUAL  &ht UNDERSCORE MINUS  &trans             &trans           &trans                   &ht GRAVE TILDE
                                                                     &trans                             &trans                               &trans             &trans          &trans
             >;
         };
