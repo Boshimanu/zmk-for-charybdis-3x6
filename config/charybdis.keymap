@@ -32,13 +32,6 @@
             layers = <0 2 1 5 6 4 7 10>;
         };
 
-        Raycast {
-            bindings = <&kp LG(SPACE)>;
-            key-positions = <27 28>;
-            timeout-ms = <50>;
-            layers = <0 2 1 5 6 7>;
-        };
-
         Expose {
             bindings = <&kp LC(UP_ARROW)>;
             key-positions = <31 32>;
@@ -62,9 +55,16 @@
 
         Space {
             bindings = <&kp SPACE>;
-            key-positions = <28 26>;
-            timeout-ms = <30>;
-            layers = <0 2 1 5 6>;
+            key-positions = <26 28>;
+            layers = <1 0 2 5 6>;
+            timeout-ms = <50>;
+        };
+
+        raycast {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <27 28>;
+            timeout-ms = <50>;
+            layers = <0 1 2 5 6>;
         };
     };
 
