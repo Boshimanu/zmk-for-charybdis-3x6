@@ -32,8 +32,8 @@
             layers = <0 2 1 5 6 4 7 10>;
         };
 
-        Space {
-            bindings = <&kp SPACE>;
+        Raycast {
+            bindings = <&kp LG(SPACE)>;
             key-positions = <27 28>;
             timeout-ms = <50>;
             layers = <0 2 1 5 6 7>;
@@ -60,8 +60,8 @@
             layers = <0 2 1 5 6>;
         };
 
-        RaycastActivation {
-            bindings = <&kp LG(SPACE)>;
+        Space {
+            bindings = <&kp SPACE>;
             key-positions = <28 26>;
             timeout-ms = <30>;
             layers = <0 2 1 5 6>;
