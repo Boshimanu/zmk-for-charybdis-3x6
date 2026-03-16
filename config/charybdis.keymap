@@ -59,6 +59,13 @@
             timeout-ms = <30>;
             layers = <0 2 1 5 6>;
         };
+
+        RaycastActivation {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <28 29>;
+            timeout-ms = <30>;
+            layers = <0 2 1 5 6>;
+        };
     };
 
     behaviors {
