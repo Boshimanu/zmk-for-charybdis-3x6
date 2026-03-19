@@ -202,8 +202,6 @@
             tapping-term-ms = <130>;
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
-
-            hold-trigger-key-positions = <30 31 13 14 15 16 17 18 19 20 21 22 23>;
         };
     };
 
@@ -319,10 +317,10 @@
 
         Colemak {
             bindings = <
-&ht LS(TAB) TAB             &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P           &kp G            &kp J        &kp L           &kp U                &ht LA(LG(LS(Y))) Y      &ht COLON SEMICOLON     &ht PIPE BACKSLASH
-&ht_bck LA(BSPC) BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T  &kp D            &kp H        &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow LEFT_CONTROL O  &ht DOUBLE_QUOTES SQT
-&WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V     &ht LG(B) B      &ht PLUS K   &ht MINUS M     &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH      &ht LC(DOWN) LC(UP_ARROW)
-                                                             &raycast          &TD1            &lt 6 ENTER      &lt 3 ENTER  &lt 2 SPACE
+&ht LS(TAB) TAB             &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P                  &kp G            &kp J        &kp L           &kp U                &ht LA(LG(LS(Y))) Y      &ht COLON SEMICOLON     &ht PIPE BACKSLASH
+&ht_bck LA(BSPC) BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T         &kp D            &kp H        &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow LEFT_CONTROL O  &ht DOUBLE_QUOTES SQT
+&WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V            &lt 9 B          &ht PLUS K   &ht MINUS M     &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH      &ht LC(DOWN) LC(UP_ARROW)
+                                                             &raycast          &NumbersLayer 1 SPACE  &lt 6 ENTER      &lt 3 ENTER  &lt 2 SPACE
             >;
         };
 
@@ -364,10 +362,10 @@
 
         Mouse {
             bindings = <
-&trans  &trans  &trans  &trans     &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                        &mkp LCLK  &TD1_mlayer  &mo 6       &trans  &trans
+&trans  &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans             &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                        &mkp LCLK  &leftClick 1 RCLK  &mo 6       &trans  &trans
             >;
         };
 
@@ -400,10 +398,10 @@
 
         Amethyst {
             bindings = <
-&none   &none            &none                  &none              &none          &none      &kp LA(LS(A))  &kp LS(LA(L))  &kp LS(LA(U))  &none                 &kp LS(LA(ENTER))      &kp LA(LS(SPACE))
-&trans  &kp LS(LA(SQT))  &kp LS(LA(SEMICOLON))  &kp LC(LEFT)       &kp LC(RIGHT)  &none      &kp LS(LA(T))  &kp LA(LS(N))  &kp LS(LA(E))  &kp LA(LS(LC(LEFT)))  &kp LS(LA(LC(RIGHT)))  &none
-&none   &none            &none                  &none              &none          &none      &kp LS(LA(D))  &kp LS(LA(K))  &kp LS(LA(J))  &none                 &kp LS(LA(COMMA))      &kp LS(LA(PERIOD))
-                                                &kp LS(LA(LC(Z)))  &none          &none      &kp LS(LA(B))  &kp LS(LA(O))
+&none   &none            &none                  &none            &none          &none              &kp LA(LS(A))  &kp LS(LA(L))  &kp LS(LA(U))  &none                 &kp LS(LA(ENTER))      &kp LA(LS(SPACE))
+&trans  &kp LS(LA(SQT))  &kp LS(LA(SEMICOLON))  &kp LC(LEFT)     &kp LC(RIGHT)  &none              &kp LS(LA(T))  &kp LA(LS(N))  &kp LS(LA(E))  &kp LA(LS(LC(LEFT)))  &kp LS(LA(LC(RIGHT)))  &none
+&none   &none            &none                  &kp LA(LS(SQT))  &kp LA(COLON)  &none              &kp LS(LA(D))  &kp LS(LA(K))  &kp LS(LA(J))  &none                 &kp LS(LA(COMMA))      &kp LS(LA(PERIOD))
+                                                &kp LS(LA(Z))    &kp LC(LEFT)   &kp LC(RIGHT)      &kp LS(LA(B))  &kp LS(LA(O))
             >;
 
             label = "Amethyst";
