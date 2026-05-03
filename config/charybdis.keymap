@@ -60,11 +60,16 @@
             timeout-ms = <50>;
         };
 
-        raycast {
+        Raycast {
             bindings = <&kp LG(SPACE)>;
             key-positions = <27 28>;
             timeout-ms = <50>;
             layers = <0 1 2 5 6>;
+        };
+
+        Emoticons {
+            bindings = <&kp LC(LG(SPACE))>;
+            key-positions = <26 27>;
         };
     };
 
