@@ -71,6 +71,11 @@
             bindings = <&kp LC(LG(SPACE))>;
             key-positions = <26 27>;
         };
+
+        GoLayer0 {
+            bindings = <&to 0>;
+            key-positions = <40 39>;
+        };
     };
 
     behaviors {
@@ -405,11 +410,20 @@
             bindings = <
 &none   &none            &none                  &none              &none          &none              &kp LA(LS(A))  &kp LS(LA(L))  &kp LS(LA(U))  &none                 &kp LS(LA(ENTER))      &kp LA(LS(SPACE))
 &trans  &kp LS(LA(SQT))  &kp LS(LA(SEMICOLON))  &kp LC(LEFT)       &kp LC(RIGHT)  &none              &kp LS(LA(T))  &kp LA(LS(N))  &kp LS(LA(E))  &kp LA(LS(LC(LEFT)))  &kp LS(LA(LC(RIGHT)))  &none
-&none   &none            &none                  &kp LA(LS(SQT))    &kp LA(COLON)  &none              &kp LS(LA(D))  &kp LS(LA(K))  &kp LS(LA(J))  &none                 &kp LS(LA(COMMA))      &kp LS(LA(PERIOD))
+&to 10  &none            &none                  &kp LA(LS(SQT))    &kp LA(COLON)  &none              &kp LS(LA(D))  &kp LS(LA(K))  &kp LS(LA(J))  &none                 &kp LS(LA(COMMA))      &kp LS(LA(PERIOD))
                                                 &kp LS(LA(LC(Z)))  &kp LC(LEFT)   &kp LC(RIGHT)      &kp LS(LA(B))  &kp LS(LA(O))
             >;
 
             label = "Amethyst";
+        };
+
+        Qwerty {
+            bindings = <
+&kp TAB    &kp Q  &kp W  &kp E      &kp R      &kp T          &kp Y     &kp U      &kp I      &kp O    &kp P     &kp BSLH
+&kp CAPS   &kp A  &kp S  &kp D      &kp F      &kp G          &kp H     &kp J      &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LSHFT  &kp Z  &kp X  &kp C      &kp V      &kp B          &kp N     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                         &kp SPACE  &kp ENTER  &kp LCTRL      &kp BSPC  &kp SPACE
+            >;
         };
     };
 
