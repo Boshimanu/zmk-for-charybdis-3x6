@@ -347,7 +347,7 @@
             bindings = <
 &trans         &trans     &trans    &trans     &trans    &trans         &kp DEL       &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &trans    &kp PG_UP
 &kp BACKSPACE  &kp LCTRL  &kp LALT  &kp LSHFT  &kp LGUI  &kp RET        &kp LG(UP)    &kp LEFT      &kp DOWN  &kp RIGHT      &kp INS   &kp PAGE_DOWN
-&trans         &trans     &trans    &trans     &trans    &kp SPACE      &kp LG(DOWN)  &kp LG(LEFT)  &trans    &kp LG(RIGHT)  &kp HOME  &kp END
+&to 2          &to 0      &trans    &trans     &trans    &kp SPACE      &kp LG(DOWN)  &kp LG(LEFT)  &trans    &kp LG(RIGHT)  &kp HOME  &kp END
                                     &trans     &trans    &trans         &trans        &trans
             >;
         };
