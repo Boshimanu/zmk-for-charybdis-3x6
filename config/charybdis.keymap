@@ -365,7 +365,7 @@
             bindings = <
 &trans      &trans    &elove     &efp       &ehmmm     &trans      &trans  &trans     &trans  &trans  &trans  &trans
 &trans      &elaugh   &esmile    &eok       &ethank    &esad       &trans  &trans     &trans  &trans  &trans  &trans
-&kp LSHIFT  &kp LGUI  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans      &trans  &kp SPACE  &trans  &trans  &trans  &kp LCTRL
+&kp LSHIFT  &kp LGUI  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mo 6       &trans  &kp SPACE  &trans  &trans  &trans  &kp LCTRL
                                  &trans     &trans     &trans      &trans  &trans
             >;
         };
