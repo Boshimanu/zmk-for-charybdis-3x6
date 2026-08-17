@@ -213,6 +213,18 @@
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
         };
+
+        move_h: move_h {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOVE_H";
+            bindings = <&to>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <50>;
+            require-prior-idle-ms = <50>;
+            flavor = "balanced";
+        };
     };
 
     macros {
@@ -328,7 +340,7 @@
         Colemak {
             bindings = <
 &ht LS(TAB) TAB             &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P                  &kp G            &kp J            &kp L           &kp U                &ht LA(LG(LS(Y))) Y      &ht COLON SEMICOLON     &ht PIPE BACKSLASH
-&ht_bck LA(BSPC) BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T         &kp D            &kp H            &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow LEFT_CONTROL O  &ht DOUBLE_QUOTES SQT
+&ht_bck LA(BSPC) BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T         &kp D            &move_h 2 H      &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow LEFT_CONTROL O  &ht DOUBLE_QUOTES SQT
 &WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V            &lt 9 B          &ht LG(SPACE) K  &ht MINUS M     &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH      &ht LC(DOWN) LC(UP_ARROW)
                                                              &raycast          &NumbersLayer 1 SPACE  &lt 6 ENTER      &lt 3 ENTER      &lt 2 SPACE
             >;
