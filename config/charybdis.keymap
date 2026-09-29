@@ -146,7 +146,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "RAYCAST";
             #binding-cells = <0>;
-            bindings = <&lt 4 LG(SPACE)>, <&kp LG(LC(SPACE))>;
+            bindings = <&lt 4 LG(SPACE)>, <&to 4>;
 
             tapping-term-ms = <180>;
         };
@@ -235,6 +235,15 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <70>;
             flavor = "balanced";
+        };
+
+        go_home_layer: go_home_layer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GO_HOME_LAYER";
+            #binding-cells = <0>;
+            bindings = <&trans>, <&to 0>;
+
+            tapping-term-ms = <180>;
         };
     };
 
@@ -386,10 +395,10 @@
 
         Emoji {
             bindings = <
-&trans      &trans    &elove     &efp       &ehmmm     &trans      &trans  &trans     &trans  &trans  &trans        &trans
-&trans      &elaugh   &esmile    &eok       &ethank    &esad       &trans  &trans     &trans  &trans  &trans        &trans
-&kp LSHIFT  &kp LGUI  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mo 6       &trans  &kp SPACE  &trans  &trans  &kp LEFT_ALT  &kp LCTRL
-                                 &trans     &trans     &trans      &trans  &trans
+&trans      &trans    &elove     &efp            &ehmmm     &trans      &trans  &trans     &trans  &trans  &trans        &trans
+&trans      &elaugh   &esmile    &eok            &ethank    &esad       &trans  &trans     &trans  &trans  &trans        &trans
+&kp LSHIFT  &kp LGUI  &mkp LCLK  &mkp MCLK       &mkp RCLK  &mo 6       &trans  &kp SPACE  &trans  &trans  &kp LEFT_ALT  &kp LCTRL
+                                 &go_home_layer  &trans     &trans      &trans  &trans
             >;
         };
 
