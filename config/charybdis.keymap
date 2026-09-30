@@ -22,14 +22,14 @@
             bindings = <&kp ESCAPE>;
             key-positions = <2 3>;
             timeout-ms = <50>;
-            layers = <0 2 1 5 6 7 10>;
+            layers = <0 2 1 5 6 7 11>;
         };
 
         del {
             bindings = <&kp DEL>;
             key-positions = <3 4>;
             timeout-ms = <50>;
-            layers = <0 2 1 5 6 4 7 10>;
+            layers = <0 2 1 5 6 4 7 11>;
         };
 
         Expose {
@@ -179,32 +179,6 @@
             bindings = <&mo>, <&mkp>;
         };
 
-        ameth: ameth {
-            compatible = "zmk,behavior-hold-tap";
-            label = "AMETH";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-        };
-
-        TD1: TD1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD1";
-            #binding-cells = <0>;
-            bindings = <&NumbersLayer 1 SPACE>, <&mo 9>;
-
-            tapping-term-ms = <140>;
-        };
-
-        TD1_mlayer: TD1_mlayer {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD1_MLAYER";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&leftClick 1 RCLK>, <&mo 9>;
-        };
-
         NumbersLayer: NumbersLayer {
             compatible = "zmk,behavior-hold-tap";
             label = "NUMBERSLAYER";
@@ -242,6 +216,15 @@
             label = "GO_HOME_LAYER";
             #binding-cells = <0>;
             bindings = <&trans>, <&to 0>;
+
+            tapping-term-ms = <180>;
+        };
+
+        go_home_from_qwerty: go_home_from_qwerty {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GO_HOME_FROM_QWERTY";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_SHIFT>, <&to 0>;
 
             tapping-term-ms = <180>;
         };
@@ -361,7 +344,7 @@
             bindings = <
 &ht LS(TAB) TAB             &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P                  &kp G            &notetaker LA(M) J  &kp L           &kp U                &ht LA(LG(LS(Y))) Y      &ht COLON SEMICOLON     &ht PIPE BACKSLASH
 &ht_bck LA(BSPC) BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T         &kp D            &move_h 2 H         &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow LEFT_CONTROL O  &ht DOUBLE_QUOTES SQT
-&WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V            &lt 9 B          &kp K               &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH      &ht LC(DOWN) LC(UP_ARROW)
+&WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V            &kp B            &kp K               &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH      &ht LC(DOWN) LC(UP_ARROW)
                                                              &raycast          &NumbersLayer 1 SPACE  &lt 6 ENTER      &lt 3 ENTER         &lt 2 SPACE
             >;
         };
@@ -453,7 +436,7 @@
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E   &kp R   &kp T       &kp Y     &kp U      &kp I      &kp O    &kp P     &kp BSLH
 &kp CAPS   &kp A  &kp S  &kp D   &kp F   &kp G       &kp H     &kp J      &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LSHFT  &kp Z  &kp X  &kp C   &kp V   &kp B       &kp N     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
+&kp LSHFT  &kp Z  &kp X  &kp C   &kp V   &kp B       &kp N     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &go_home_from_qwerty
                          &trans  &trans  &trans      &kp BSPC  &kp SPACE
             >;
         };
