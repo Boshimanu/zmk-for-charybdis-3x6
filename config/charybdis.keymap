@@ -228,6 +228,18 @@
 
             tapping-term-ms = <180>;
         };
+
+        amethyst: amethyst {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AMETHYST";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            quick-tap-ms = <50>;
+            tapping-term-ms = <170>;
+            require-prior-idle-ms = <50>;
+            flavor = "balanced";
+        };
     };
 
     macros {
@@ -342,10 +354,10 @@
 
         Colemak {
             bindings = <
-&ht LS(TAB) TAB             &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P                  &kp G            &notetaker LA(M) J  &kp L           &kp U                &ht LA(LG(LS(Y))) Y      &ht COLON SEMICOLON     &ht PIPE BACKSLASH
-&ht_bck LA(BSPC) BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T         &kp D            &kp H               &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow LEFT_CONTROL O  &ht DOUBLE_QUOTES SQT
-&WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V            &kp B            &kp K               &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH      &ht LC(DOWN) LC(UP_ARROW)
-                                                             &raycast          &NumbersLayer 1 SPACE  &lt 6 ENTER      &lt 3 ENTER         &lt 2 SPACE
+&ht LS(TAB) TAB             &ht LG(Q) Q      &ht LG(W) W     &ht LG(F) F       &kp P                  &kp G              &notetaker LA(M) J  &kp L           &kp U                &ht LA(LG(LS(Y))) Y      &ht COLON SEMICOLON     &ht PIPE BACKSLASH
+&ht_bck LA(BSPC) BACKSPACE  &lhmrow LCTRL A  &lhmrow LALT R  &lhmrow LSHIFT S  &lhmrow LGUI T         &kp D              &kp H               &rhmrow RGUI N  &rhmrow RSHFT E      &rhmrow RALT I           &rhmrow LEFT_CONTROL O  &ht DOUBLE_QUOTES SQT
+&WisprFlow                  &ht LG(Z) Z      &ht LG(X) X     &ht LG(C) C       &ht LG(V) V            &amethyst 9 B      &kp K               &kp M           &ht LESS_THAN COMMA  &ht GREATER_THAN PERIOD  &ht QUESTION SLASH      &ht LC(DOWN) LC(UP_ARROW)
+                                                             &raycast          &NumbersLayer 1 SPACE  &lt 6 ENTER        &lt 3 ENTER         &lt 2 SPACE
             >;
         };
 
